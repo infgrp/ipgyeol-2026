@@ -26,12 +26,11 @@ desktop.ini
 .idea/
 *.swp
 
-# 원본 자료 — 저작권은 각 대학에 있으므로 git에 포함하지 않음.
-# 로컬에서 extractor를 실행한 뒤 site/public/data.json만 커밋한다.
-data/raw/
+# 전처리 산출물 (git 불필요, 재생성 가능)
 data/converted/
 data/preprocessed/
 data/ocr/
+# data/raw/ 는 커밋 대상 — 대학 입학처 공개 자료
 
 # data.json은 커밋 대상 (extractor로 로컬 생성 후 push)
 # site/public/data.json  ← 주석 처리: 커밋 허용

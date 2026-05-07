@@ -1,0 +1,7 @@
+//푸터
+$(document).ready(function () {
+    $(".footer-site").stop().click(function(){
+        $(this).toggleClass("active"); 
+    });
+});
+

@@ -1,0 +1,141 @@
+// 모달 보여주기
+function showModal(no, chk){
+	$("#boardSeq").val(no);
+	$('#chk').val(chk);
+	$("#staticBackdrop").modal("show");
+}
+
+$(function(){
+	// 모달 닫기 시 비밀번호 초기화
+	$('.modal').on('hidden.bs.modal', function(e){
+		$("#inputPwd").val("");
+	})
+	
+	//모달 비밀번호 체크
+	$('#button-addon2').on('click', function(){
+		var pwd = $("#inputPwd").val();
+		var boardSeq = $("#boardSeq").val();
+		var menuNo = $('#menuNo').val();
+		var prvNumber = $('#prvNumber').val();
+		var nextNumber = $('#nextNumber').val();
+		
+		if($('#chk').val() == 'edit'){
+			if(pwd.length == 0){
+				alert("비밀번호를 입력해주세요");
+			}else{
+				$.ajax({
+					url : "/chkPwd.do",
+					data : {
+						pwd : pwd,
+						boardSeq : boardSeq
+					},
+					type : "json",
+					method : "get",
+					success : function(data){
+						if(data.result > 0){
+							$("#staticBackdrop").modal("hide");
+							location.href="?action=edit&no="+boardSeq;
+						} else {
+							alert("비밀번호가 일치하지 않습니다.");
+							$("#staticBackdrop").modal("hide");
+						}
+					},
+					error:function(request,status,error){
+						alert("오류가 발생했습니다.");
+					}
+				});
+			}			
+		}else if($('#chk').val() == 'dele'){
+			if(pwd.length == 0){
+				alert("비밀번호를 입력해주세요");
+			}else{
+				$.ajax({
+					url : "/chkPwd.do",
+					data : {
+						pwd : pwd,
+						boardSeq : boardSeq
+					},
+					type : "json",
+					method : "get",
+					success : function(data){
+						if(data.result > 0){
+							if(confirm("정말로 삭제하시겠습니까?")){
+								$.ajax({
+									url : '/boardDelete.do',
+									method : 'post',
+									data : {
+										stat : '4',
+										chkNo : $('#chkNo').val()
+									},
+									success : function(data){
+										$("#staticBackdrop").modal("hide");
+										location.href='/main/'+menuNo;
+									}
+								});
+							}							
+						} else {
+							alert("비밀번호가 일치하지 않습니다.");
+							$("#staticBackdrop").modal("hide");
+						}
+					},
+					error:function(request,status,error){
+						alert("오류가 발생했습니다.");
+					}
+				});
+			}
+		}else if($('#chk').val() == 'prv'){
+			if(pwd.length == 0){
+				alert("비밀번호를 입력해주세요");
+			}else{
+				$.ajax({
+					url : "/chkPwd.do",
+					data : {
+						pwd : pwd,
+						boardSeq : prvNumber
+					},
+					type : "json",
+					method : "get",
+					success : function(data){
+						if(data.result > 0){
+							$("#staticBackdrop").modal("hide");
+							location.href="?action=view&no="+prvNumber;
+						} else {
+							alert("비밀번호가 일치하지 않습니다.");
+							$("#staticBackdrop").modal("hide");
+						}
+					},
+					error:function(request,status,error){
+						alert("오류가 발생했습니다.");
+					}
+				});
+			}
+		}else if($('#chk').val() == 'next'){
+			if(pwd.length == 0){
+				alert("비밀번호를 입력해주세요");
+			}else{
+				$.ajax({
+					url : "/chkPwd.do",
+					data : {
+						pwd : pwd,
+						boardSeq : nextNumber
+					},
+					type : "json",
+					method : "get",
+					success : function(data){
+						if(data.result > 0){
+							$("#staticBackdrop").modal("hide");
+							location.href="?action=view&no="+nextNumber;
+						} else {
+							alert("비밀번호가 일치하지 않습니다.");
+							$("#staticBackdrop").modal("hide");
+						}
+					},
+					error:function(request,status,error){
+						alert("오류가 발생했습니다.");
+					}
+				});
+			}
+		}
+
+	})
+})

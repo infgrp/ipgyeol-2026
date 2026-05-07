@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://iphak.ulsan.ac.kr/main/47?action=view&no=16269 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>울산대학교 입학처</title>
+		<link rel="shortcut icon" href="https://iphak.ulsan.ac.kr/images/front/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/slick.css">
+    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/aos.css">
+
+    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/default.css">
+    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/site-map.css">
+    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/font.css">
+    
+ <!-- ============jQuery 2.2.1============ -->
+	<script src="./울산대ㅣ2026 정시 입결_files/jquery-2.2.1.min.js.다운로드"></script>
+	
+	<!-- ============owl============ -->
+    <script src="./울산대ㅣ2026 정시 입결_files/slick.js.다운로드"></script>
+    
+	<!-- ============bootstrap.js============ -->			
+    <script src="./울산대ㅣ2026 정시 입결_files/bootstrap.bundle.js.다운로드"></script>
+    
+    <!-- ============descrambler.js============ -->
+    <script src="./울산대ㅣ2026 정시 입결_files/descrambler.min.min.js.다운로드"></script>
+    
+	<!-- ============aos.js============ -->
+	<script src="./울산대ㅣ2026 정시 입결_files/aos.js.다운로드"></script>
+	
+	<!-- ============프로젝트 js============ -->
+    <script src="./울산대ㅣ2026 정시 입결_files/main.js.다운로드"></script>
+    <script src="./울산대ㅣ2026 정시 입결_files/header.js.다운로드"></script>
+    <script src="./울산대ㅣ2026 정시 입결_files/footer.js.다운로드"></script>
+	
+    <!-- ============cookie.js============ -->
+    <script src="./울산대ㅣ2026 정시 입결_files/jquery.cookie.js.다운로드"></script>
+    <!-- <script type="text/javascript" src="../js/main/sitemap.js"></script> -->
+
+    <!-- jQuery UI 1.11.4 -->
+    <script src="./울산대ㅣ2026 정시 입결_files/jquery.validate.js.다운로드"></script>
+
+	<script>
+		// 이미지 오류시 대체 이미지
+		$(function() {
+		    $("img").each(function (i, ele) {
+		    	var uri = "";
+		    	if($('#imgCheck').attr("class") == 'imgExc'){
+		    		uri = "/images/front/default-a4.png";
+		    	}else{
+		    		uri = "/images/front/default-img.png";
+		    	}
+		        //이미 load된 이미지들을 처리하기 위한 코드
+		        if (ele.src != '' && ele.complete == true && ele.naturalWidth == 0) {
+		            $(this).attr("src", uri);
+		        }
+		        //load되지 않은 이미지들은 error 이벤트를 추가해준다
+		        $(this).on('error', function () {
+		            $(this).attr("src", uri);
+		        });
+		    });
+		});
+	
+		function getCookie(name){
+			var cookieName = name + "=";
+			var i = 0;
+			while(i <= document.cookie.length){
+				var c = (i + cookieName.length);
+				if(document.cookie.substring(i, c) == cookieName){
+					if((lastCharCookie = document.cookie.indexOf(";", c)) == -1) lastCharCookie = document.cookie.length;
+					return encodeURI(document.cookie.substring(c, lastCharCookie));
+				}
+				
+				i = document.cookie.indexOf(" ", i) + 1
+				if(i == 0) break;			
+			}
+			return "";
+		}
+		
+		function setCookie(name, value, expire){
+			var today = new Date(); 
+			today.setDate(today.getDate() + expire);
+			document.cookie = name + "=" + encodeURI(value) + "; expires=" + today.toGMTString() + "; path=/;";
+		}
+	</script><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/main.css">
+	    <link rel="stylesheet" type="text/css" href="./울산대ㅣ2026 정시 입결_files/sub.css">
+		<script src="./울산대ㅣ2026 정시 입결_files/sub.js.다운로드"></script>
+	</head>
+	<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+		<div class="wrap sub main-page">
+			<script>
+	$(function(){
+		// 팝업 표시 여부
+		if(false){
+			$(".open_pop").fadeIn();
+			$(".wrap").addClass("overflow-hidden vh-100");
+			
+			$(".pop_item_wrap").slick({
+				infinite:false, 
+				arrows: true, 
+				dots:false,
+				/*slidesToShow: 3,
+				slidesToShow: 3,
+		  		slidesToScroll: 1,*/
+		  		rows: 2, 
+				slidesPerRow: 4,
+				//slidesToShow: 4,
+		  		//slidesToScroll: 4,
+				setPosition: 0,
+				responsive:[
+					{
+				    	breakpoint: 1300,
+				    	settings: {
+							rows: 2,
+							slidesPerRow: 3,
+				    	}
+					},
+					{
+				    	breakpoint: 1080,
+				    	settings: {
+				    		rows: 1,
+				    		slidesPerRow: 1,
+					        slidesToShow: 2,
+					        slidesToScroll: 2,
+				    	}
+					},
+					{
+				    	breakpoint: 767,
+				    	settings: {
+				    		rows: 1,
+				    		slidesPerRow: 1,
+					        slidesToShow: 1,
+					        slidesToScroll: 1,
+				    	}
+					},
+				]
+			});			
+		}
+		
+		// 모바일 엔터 동작시 검색어 유무
+		$('#mobileSearchKeyword').on('keydown', function(key){
+			var form = document.mobileFrmSearch;
+			if(key.keyCode == 13){
+				if($('#mobileSearchKeyword').val() == ""){
+					alert("검색어를 입력해주세요.");
+					return false;
+				}else{
+					form.submit();
+				}
+				
+			}
+		})
+	});
+	
+	function searchBtn(e){
+		// 모바일 검색어 유무
+		if($('#mobileSearchKeyword').val() == ""){
+			alert("검색어를 입력해주세요.");
+			return false;
+		}else{
+			document.mobileFrmSearch.submit();
+		}	
+	} 	
+</script>
+
+<div class="skipNav">
+	<a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#contentBody">본문바로가기</a>
+</div>
+
+<!--헤더-->
+<header class="header sub_header headerActive">
+    <div class="inner">
+        <div class="left">
+            <div class="logo">
+                <a href="https://iphak.ulsan.ac.kr/main" title="울산대학교 메인 바로가기">
+                    <img class="logo-wh" src="./울산대ㅣ2026 정시 입결_files/logo-1-wh.png" alt="울산대학교로고">
+                    <img class="logo-bk" src="./울산대ㅣ2026 정시 입결_files/logo-1-bk.png" alt="울산대학교로고">
+                </a>
+                <a href="https://iphak.ulsan.ac.kr/main" title="메인 바로가기">
+                    <img class="logo-wh" src="./울산대ㅣ2026 정시 입결_files/logo-2-wh.png" alt="울산대입학처로고">
+                    <img class="logo-bk" src="./울산대ㅣ2026 정시 입결_files/logo-2-bk.png" alt="울산대입학처로고">
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <ul class="menu">
+            	<li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/2" title="수시모집">수시모집</a>
+		                </li>
+	                <li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/3" title="정시모집">정시모집</a>
+		                </li>
+	                <li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/4" title="편입학">편입학</a>
+		                </li>
+	                <li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/5" title="기타모집">기타모집</a>
+		                </li>
+	                <li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/6" title="입학자료실">입학자료실</a>
+		                </li>
+	                <li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/8" title="고교연계">고교연계</a>
+		                </li>
+	                <li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/7" title="대학안내">대학안내</a>
+		                </li>
+	                <li class="">
+		                 	<a href="https://iphak.ulsan.ac.kr/main/57" title="입학도우미">입학도우미</a>
+		                </li>
+	                </ul>
+            
+            <div class="menu_drop" style="display: none; height: 376px; padding-top: 20px; margin-top: 0px; padding-bottom: 20px; margin-bottom: 0px;">
+		        <ul class="dep_1_list">
+		           	<li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/2" title="수시모집">수시모집</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/9" title="모집요강">모집요강</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/11" title="전형안내영상">전형안내영상</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/10" title="학생부종합전형가이드">학생부종합전형가이드</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/46" title="전년도입시결과">전년도입시결과</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/13" target="_blank" title="합격자조회 및 안내">합격자조회 및 안내</a>
+													</li>									
+											</ul>
+				            </li>
+				        <li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/3" title="정시모집">정시모집</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/14" title="모집요강">모집요강</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/15" title="전형안내영상">전형안내영상</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/47" title="전년도입시결과">전년도입시결과</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/17" target="_blank" title="합격자조회 및 안내">합격자조회 및 안내</a>
+													</li>									
+											</ul>
+				            </li>
+				        <li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/4" title="편입학">편입학</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/18" title="모집요강">모집요강</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/52" title="전년도입시결과">전년도입시결과</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/20" target="_blank" title="합격자조회 및 안내">합격자조회 및 안내</a>
+													</li>									
+											</ul>
+				            </li>
+				        <li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/5" title="기타모집">기타모집</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/21" title="재외국민 모집요강">재외국민 모집요강</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/22" title="외국인 모집요강(전기)">외국인 모집요강(전기)</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/48" title="외국인 모집요강(후기)">외국인 모집요강(후기)</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/23" title="시간제등록생 모집요강">시간제등록생 모집요강</a>
+													</li>									
+											</ul>
+				            </li>
+				        <li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/6" title="입학자료실">입학자료실</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/24" title="대학입학전형시행계획">대학입학전형시행계획</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/25" title="공지사항">공지사항</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/26" target="_blank" title="성적산출">성적산출</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/27" title="자료실">자료실</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/30" title="QnA">QnA</a>
+													</li>									
+											</ul>
+				            </li>
+				        <li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/8" title="고교연계">고교연계</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/65" title="고교별 합격자 조회(교사 전용)">고교별 합격자 조회(교사 전용)</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/42" title="대학-고교연계 프로그램">대학-고교연계 프로그램</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/64" title="프로그램 연간 운영 일정">프로그램 연간 운영 일정</a>
+													</li>									
+											</ul>
+				            </li>
+				        <li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/7" title="대학안내">대학안내</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/32" title="학부소개">학부소개</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/29" title="대학소개영상">대학소개영상</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/60" title="트랙소개서">트랙소개서</a>
+													</li>									
+											</ul>
+				            </li>
+				        <li>
+			                 	<a class="dep_1" href="https://iphak.ulsan.ac.kr/main/57" title="입학도우미">입학도우미</a>		                
+				                <ul class="dep_2_list">
+			                        <li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/56" title="한손안에 들어오는 입시정보">한손안에 들어오는 입시정보</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/58" title="전공멘토단 인터뷰">전공멘토단 인터뷰</a>
+													</li>									
+											<li>
+					                            	<a class="dep_2 " href="https://iphak.ulsan.ac.kr/main/28" title="입학소식지">입학소식지</a>
+													</li>									
+											</ul>
+				            </li>
+				        </ul>
+		   		<div class="under_bar">
+		   			<div class="list">
+		   				<a class="" href="https://www.instagram.com/uou_admission" target="_blank" title="인스타그램"><img src="./울산대ㅣ2026 정시 입결_files/sns-icon-1.png" alt="sns로고"></a>
+		   				<a class="" href="https://www.youtube.com/@universityofulsan287" target="_blank" title="유튜브"><img src="./울산대ㅣ2026 정시 입결_files/sns-icon-2.png" alt="sns로고"></a>
+		   				<a class="" href="https://www.facebook.com/universityofulsan" target="_blank" title="페이스북"><img src="./울산대ㅣ2026 정시 입결_files/sns-icon-3.png" alt="sns로고"></a>
+		   				<a class="" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" target="_blank" title=""><img src="./울산대ㅣ2026 정시 입결_files/sns-icon-4.png" alt="sns로고"></a>
+		   			</div>
+		   		</div>
+		    </div>
+        </div>
+        <div class="right">
+        	<a class="home-btn" href="https://www.ulsan.ac.kr/kor/Main.do" target="_blank" title="울산대학교 대표홈페이지">대표홈페이지</a>
+            <button type="button" class="search_btn" onclick="location.href=&#39;/main/45&#39;">
+                <span class="search_btn_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                    </svg>
+                </span>
+            </button>
+            <button type="button" class="btn info-btn">
+                <img src="./울산대ㅣ2026 정시 입결_files/Icon-info.png" alt="팝업아이콘">
+                <div class="count">0</div>
+            </button>
+            <div class="hambeok" tabindex="0">
+                <em></em>
+                <em></em>
+                <em></em>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!--헤더-->
+
+<!--모바일 메뉴-->
+<div class="m_menu">
+    <div class="box">
+        
+        <div class="search">
+            <form name="mobileFrmSearch" action="https://iphak.ulsan.ac.kr/main/45" id="mobileFrmSearch" method="get" autocomplete="off">
+                <div class="txt">
+                    <label for="mobileSearchKeyword" class="blind">검색어</label>
+                    <input type="hidden" name="searchCondition" value="">
+                    <input name="searchKeyword" id="mobileSearchKeyword" type="text" placeholder="무엇이 궁금한가요?" class="" value="">
+                    <button type="button" class="search_btn" onclick="searchBtn()">
+	                    <span class="search_btn_icon">
+	                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-search" viewBox="0 0 16 16">
+	                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+	                        </svg>
+	                    </span>
+	                </button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <div class="m_menu_bar">
+        <ul class="nav m_side_menu text-left">
+        	<li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="수시모집">수시모집</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/9" title="모집요강">모집요강</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/11" title="전형안내영상">전형안내영상</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/10" title="학생부종합전형가이드">학생부종합전형가이드</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/46" title="전년도입시결과">전년도입시결과</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/13" target="_blank" title="합격자조회 및 안내">합격자조회 및 안내</a>
+						                        	</h5>
+						                        </li>					                		
+				                		</ul>
+		            </li>
+	            <li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="정시모집">정시모집</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/14" title="모집요강">모집요강</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/15" title="전형안내영상">전형안내영상</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/47" title="전년도입시결과">전년도입시결과</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/17" target="_blank" title="합격자조회 및 안내">합격자조회 및 안내</a>
+						                        	</h5>
+						                        </li>					                		
+				                		</ul>
+		            </li>
+	            <li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="편입학">편입학</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/18" title="모집요강">모집요강</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/52" title="전년도입시결과">전년도입시결과</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/20" target="_blank" title="합격자조회 및 안내">합격자조회 및 안내</a>
+						                        	</h5>
+						                        </li>					                		
+				                		</ul>
+		            </li>
+	            <li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="기타모집">기타모집</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/21" title="재외국민 모집요강">재외국민 모집요강</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/22" title="외국인 모집요강(전기)">외국인 모집요강(전기)</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/48" title="외국인 모집요강(후기)">외국인 모집요강(후기)</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/23" title="시간제등록생 모집요강">시간제등록생 모집요강</a>
+						                        	</h5>
+						                        </li>				                		
+				                		</ul>
+		            </li>
+	            <li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="입학자료실">입학자료실</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/24" title="대학입학전형시행계획">대학입학전형시행계획</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/25" title="공지사항">공지사항</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/26" target="_blank" title="성적산출">성적산출</a>
+						                        	</h5>
+						                        </li>					                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/27" title="자료실">자료실</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/30" title="QnA">QnA</a>
+						                        	</h5>
+						                        </li>				                		
+				                		</ul>
+		            </li>
+	            <li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="고교연계">고교연계</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/65" title="고교별 합격자 조회(교사 전용)">고교별 합격자 조회(교사 전용)</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/42" title="대학-고교연계 프로그램">대학-고교연계 프로그램</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/64" title="프로그램 연간 운영 일정">프로그램 연간 운영 일정</a>
+						                        	</h5>
+						                        </li>				                		
+				                		</ul>
+		            </li>
+	            <li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="대학안내">대학안내</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/32" title="학부소개">학부소개</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/29" title="대학소개영상">대학소개영상</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/60" title="트랙소개서">트랙소개서</a>
+						                        	</h5>
+						                        </li>				                		
+				                		</ul>
+		            </li>
+	            <li class="m_menuOver">
+		                <a class="m_menu_hover" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#none;" title="입학도우미">입학도우미</a>
+		                <ul class="m_sub_menu m_subMenuOver">
+			                <li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/56" title="한손안에 들어오는 입시정보">한손안에 들어오는 입시정보</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/58" title="전공멘토단 인터뷰">전공멘토단 인터뷰</a>
+						                        	</h5>
+						                        </li>				                		
+				                		<li class="m_menu_list">
+						                        <h5 class=""><a class="w-100" href="https://iphak.ulsan.ac.kr/main/28" title="입학소식지">입학소식지</a>
+						                        	</h5>
+						                        </li>				                		
+				                		</ul>
+		            </li>
+	            </ul>
+    </div>
+</div>
+
+<!--사이트맵-->
+<section class="site-map">
+    <div class="top">
+        
+        <button class="btn close-btn">닫기</button>
+    </div>
+    <ul class="menu-list">
+    	<li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="수시모집">수시모집</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/9" title="모집요강">모집요강</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/11" title="전형안내영상">전형안내영상</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/10" title="학생부종합전형가이드">학생부종합전형가이드</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/46" title="전년도입시결과">전년도입시결과</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/13" title="합격자조회 및 안내" target="_blank">합격자조회 및 안내</a>
+						                    </li>					                
+					                </ul>
+		        </li>
+		    <li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="정시모집">정시모집</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/14" title="모집요강">모집요강</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/15" title="전형안내영상">전형안내영상</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/47" title="전년도입시결과">전년도입시결과</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/17" title="합격자조회 및 안내" target="_blank">합격자조회 및 안내</a>
+						                    </li>					                
+					                </ul>
+		        </li>
+		    <li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="편입학">편입학</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/18" title="모집요강">모집요강</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/52" title="전년도입시결과">전년도입시결과</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/20" title="합격자조회 및 안내" target="_blank">합격자조회 및 안내</a>
+						                    </li>					                
+					                </ul>
+		        </li>
+		    <li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="기타모집">기타모집</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/21" title="재외국민 모집요강">재외국민 모집요강</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/22" title="외국인 모집요강(전기)">외국인 모집요강(전기)</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/48" title="외국인 모집요강(후기)">외국인 모집요강(후기)</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/23" title="시간제등록생 모집요강">시간제등록생 모집요강</a>
+						                    </li>
+					                </ul>
+		        </li>
+		    <li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="입학자료실">입학자료실</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/24" title="대학입학전형시행계획">대학입학전형시행계획</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/25" title="공지사항">공지사항</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/26" title="성적산출" target="_blank">성적산출</a>
+						                    </li>					                
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/27" title="자료실">자료실</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/30" title="QnA">QnA</a>
+						                    </li>
+					                </ul>
+		        </li>
+		    <li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="고교연계">고교연계</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/65" title="고교별 합격자 조회(교사 전용)">고교별 합격자 조회(교사 전용)</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/42" title="대학-고교연계 프로그램">대학-고교연계 프로그램</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/64" title="프로그램 연간 운영 일정">프로그램 연간 운영 일정</a>
+						                    </li>
+					                </ul>
+		        </li>
+		    <li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="대학안내">대학안내</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/32" title="학부소개">학부소개</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/29" title="대학소개영상">대학소개영상</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/60" title="트랙소개서">트랙소개서</a>
+						                    </li>
+					                </ul>
+		        </li>
+		    <li class="depth-1">
+		            <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" title="입학도우미">입학도우미</a>
+		            <ul class="row">
+			            <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/56" title="한손안에 들어오는 입시정보">한손안에 들어오는 입시정보</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/58" title="전공멘토단 인터뷰">전공멘토단 인터뷰</a>
+						                    </li>
+					                <li class="depth-2 col-lg-2 col-sm">
+						                    <a href="https://iphak.ulsan.ac.kr/main/28" title="입학소식지">입학소식지</a>
+						                    </li>
+					                </ul>
+		        </li>
+		    </ul>
+</section>
+
+
+
+<!-- popup -->
+<section class="open_pop">
+	<div class="pop_wrap inner">
+		<div class="txt">
+			<div class="t1">어디에 있어도 희망이 되는 이름</div>
+			<div class="t2">글로컬대학, <b class="d-inline-block">울산대학교</b></div>
+		</div>
+			<div class="pop_item_area">
+				<div class="btn-group">
+					<a class="link-btn link-01" href="https://uwin.ulsan.ac.kr/guwin/enff/eentn/w/BAW001.aspx" target="_blank" title="신입생 정보시스템 바로가기">신입생 정보시스템</a>
+					<a class="link-btn link-02" href="https://uwin.ulsan.ac.kr/guwin/enff/eadmt/w/BBW001.aspx" target="_blank" title="편입생 정보시스템 바로가기">편입생 정보시스템</a>
+				</div>
+				<div class="pop_item_wrap">
+					</div>
+			</div>
+			
+			<h3 class="noPop_txt text-white text-center">현재 등록된 팝업이 없습니다.</h3>          
+            <button type="button" id="closePop" class="btn text-white mx-auto d-block">닫기</button>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--사이트맵--><script src="./울산대ㅣ2026 정시 입결_files/kakao.min.js.다운로드" integrity="sha384-6MFdIr0zOira1CHQkedUqJVql0YtcZA1P0nbPrQYJXVJZUkTk/oX4U9GhUIs3/z8" crossorigin="anonymous">></script>
+<script>
+  Kakao.init('3f81e648a19fdfb618bd09a29241c004'); // 사용하려는 앱의 JavaScript 키 입력
+  
+  // 링크 공유
+  $(function(){
+	  $('#data-copy').click(function() {
+
+		    // 화면에서 hidden 처리한 input box type을 text로 일시 변환
+		    $('#data-area').attr('type', 'text');
+		    
+		    // input에 담긴 데이터를 선택
+		    $('#data-area').select();
+		    
+		    //  clipboard에 데이터 복사
+		    var copy = document.execCommand('copy');
+		    
+		    // input box를 다시 hidden 처리
+		    $('#data-area').attr('type', 'hidden');
+		    
+		    // 사용자 알림
+		    if(copy) {
+		    	alert("링크가 복사되었습니다.");
+		    }
+		});
+  })
+</script>
+<section class="sub_layout_menu">
+    <section class="d-flex justify-content-between flex-row align-items-center">
+        <a href="https://iphak.ulsan.ac.kr/main" title="메인바로가기" class="home_link">
+            <img src="./울산대ㅣ2026 정시 입결_files/home-icon.png" alt="home">
+        </a>
+        <ol class="d-flex justify-content-start flex-row">
+            <li class="">
+            	<a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" class="dropdown-toggle" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false">정시모집</a>
+                	<ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink1">
+	                	<li><a href="https://iphak.ulsan.ac.kr/main/2" class="dropdown-item d-block py-2 px-3 ">수시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/3" class="dropdown-item d-block py-2 px-3 active">정시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/4" class="dropdown-item d-block py-2 px-3 ">편입학</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/5" class="dropdown-item d-block py-2 px-3 ">기타모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/6" class="dropdown-item d-block py-2 px-3 ">입학자료실</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/8" class="dropdown-item d-block py-2 px-3 ">고교연계</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/7" class="dropdown-item d-block py-2 px-3 ">대학안내</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/57" class="dropdown-item d-block py-2 px-3 ">입학도우미</a></li>
+	                    	</ul>
+                <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink1">
+	                	<li><a href="https://iphak.ulsan.ac.kr/main/2" class="dropdown-item d-block py-2 px-3 ">수시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/3" class="dropdown-item d-block py-2 px-3 active">정시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/4" class="dropdown-item d-block py-2 px-3 ">편입학</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/5" class="dropdown-item d-block py-2 px-3 ">기타모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/6" class="dropdown-item d-block py-2 px-3 ">입학자료실</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/8" class="dropdown-item d-block py-2 px-3 ">고교연계</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/7" class="dropdown-item d-block py-2 px-3 ">대학안내</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/57" class="dropdown-item d-block py-2 px-3 ">입학도우미</a></li>
+	                    	</ul>
+                <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink1">
+	                	<li><a href="https://iphak.ulsan.ac.kr/main/2" class="dropdown-item d-block py-2 px-3 ">수시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/3" class="dropdown-item d-block py-2 px-3 active">정시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/4" class="dropdown-item d-block py-2 px-3 ">편입학</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/5" class="dropdown-item d-block py-2 px-3 ">기타모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/6" class="dropdown-item d-block py-2 px-3 ">입학자료실</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/8" class="dropdown-item d-block py-2 px-3 ">고교연계</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/7" class="dropdown-item d-block py-2 px-3 ">대학안내</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/57" class="dropdown-item d-block py-2 px-3 ">입학도우미</a></li>
+	                    	</ul>
+                <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink1">
+	                	<li><a href="https://iphak.ulsan.ac.kr/main/2" class="dropdown-item d-block py-2 px-3 ">수시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/3" class="dropdown-item d-block py-2 px-3 active">정시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/4" class="dropdown-item d-block py-2 px-3 ">편입학</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/5" class="dropdown-item d-block py-2 px-3 ">기타모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/6" class="dropdown-item d-block py-2 px-3 ">입학자료실</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/8" class="dropdown-item d-block py-2 px-3 ">고교연계</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/7" class="dropdown-item d-block py-2 px-3 ">대학안내</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/57" class="dropdown-item d-block py-2 px-3 ">입학도우미</a></li>
+	                    	</ul>
+                <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink1">
+	                	<li><a href="https://iphak.ulsan.ac.kr/main/2" class="dropdown-item d-block py-2 px-3 ">수시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/3" class="dropdown-item d-block py-2 px-3 active">정시모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/4" class="dropdown-item d-block py-2 px-3 ">편입학</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/5" class="dropdown-item d-block py-2 px-3 ">기타모집</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/6" class="dropdown-item d-block py-2 px-3 ">입학자료실</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/8" class="dropdown-item d-block py-2 px-3 ">고교연계</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/7" class="dropdown-item d-block py-2 px-3 ">대학안내</a></li>
+	                    	<li><a href="https://iphak.ulsan.ac.kr/main/57" class="dropdown-item d-block py-2 px-3 ">입학도우미</a></li>
+	                    	</ul>
+                </li>
+            <li class="">
+	            <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	<li><a href="https://iphak.ulsan.ac.kr/main/15" target="_self" class="dropdown-item d-block py-2 px-3 ">전형안내영상</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/14" target="_self" class="dropdown-item d-block py-2 px-3 ">모집요강</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/47" target="_self" class="dropdown-item d-block py-2 px-3 active">전년도입시결과</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/17" target="_blank" class="dropdown-item d-block py-2 px-3 ">합격자조회 및 안내</a></li>
+		                	</ul>
+		        <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	<li><a href="https://iphak.ulsan.ac.kr/main/15" target="_self" class="dropdown-item d-block py-2 px-3 active">전형안내영상</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/14" target="_self" class="dropdown-item d-block py-2 px-3 ">모집요강</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/47" target="_self" class="dropdown-item d-block py-2 px-3 active">전년도입시결과</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/17" target="_blank" class="dropdown-item d-block py-2 px-3 ">합격자조회 및 안내</a></li>
+		                	</ul>
+		        <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	<li><a href="https://iphak.ulsan.ac.kr/main/15" target="_self" class="dropdown-item d-block py-2 px-3 ">전형안내영상</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/14" target="_self" class="dropdown-item d-block py-2 px-3 active">모집요강</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/47" target="_self" class="dropdown-item d-block py-2 px-3 active">전년도입시결과</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/17" target="_blank" class="dropdown-item d-block py-2 px-3 ">합격자조회 및 안내</a></li>
+		                	</ul>
+		        <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" class="dropdown-toggle" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">전년도입시결과</a>
+	            	<ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	<li><a href="https://iphak.ulsan.ac.kr/main/15" target="_self" class="dropdown-item d-block py-2 px-3 ">전형안내영상</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/14" target="_self" class="dropdown-item d-block py-2 px-3 ">모집요강</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/47" target="_self" class="dropdown-item d-block py-2 px-3 active">전년도입시결과</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/17" target="_blank" class="dropdown-item d-block py-2 px-3 ">합격자조회 및 안내</a></li>
+		                	</ul>
+		        <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	<li><a href="https://iphak.ulsan.ac.kr/main/15" target="_self" class="dropdown-item d-block py-2 px-3 ">전형안내영상</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/14" target="_self" class="dropdown-item d-block py-2 px-3 ">모집요강</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/47" target="_self" class="dropdown-item d-block py-2 px-3 active">전년도입시결과</a></li>
+		                	<li><a href="https://iphak.ulsan.ac.kr/main/17" target="_blank" class="dropdown-item d-block py-2 px-3 active">합격자조회 및 안내</a></li>
+		                	</ul>
+		        </li>
+            <li class="">
+	            <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	</ul>
+	            <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	</ul>
+	            <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	</ul>
+	            <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	</ul>
+	            <ul class="sub_dept dropdown-menu py-0" aira-labelledby="dropdownMenuLink2">
+		            	</ul>
+	            </li>
+        </ol>
+        <div class="d-flex gap-3">
+            <a href="javascript:window.print() return false;" class="d-none d-sm-block" onclick="window.print()"><img src="./울산대ㅣ2026 정시 입결_files/print-icon.png" alt="프린트 아이콘"></a>
+                        <a href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#" class="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img src="./울산대ㅣ2026 정시 입결_files/share-icon.png" alt="공유 아이콘"></a>
+            <ul class="sub_dept dropdown-menu py-0" aria-labelledby="dropdownMenuButton1" style="z-index: 80;">
+			    <li class="">
+			    	<a id="kakaotalk-sharing-btn" class="dropdown-item" href="javascript:;"><img width="20px" src="./울산대ㅣ2026 정시 입결_files/kakaotalk_sharing_btn_medium_ov.png" alt="공유 아이콘" class="me-2">카카오톡 공유하기</a>
+					<script>
+						Kakao.Share.createDefaultButton({
+						  container: '#kakaotalk-sharing-btn',
+						  objectType: 'feed',
+						  content: {
+						    title: '울산대학교 입학처',
+						    description: 'https://iphak.ulsan.ac.kr/main/47',
+						    imageUrl:
+						      'https://iphak.ulsan.ac.kr/images/front/default-img.png',
+						    link: {
+						      // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+						      mobileWebUrl: 'https://iphak.ulsan.ac.kr/main',
+						      webUrl: 'https://iphak.ulsan.ac.kr/main',
+						    },
+						  },
+						  social: {
+						
+						  },
+						  buttons: [
+						    {
+						      title: '자세히 보기',
+						      link: {
+						        mobileWebUrl: 'https://iphak.ulsan.ac.kr/main/47',
+						        webUrl: 'https://iphak.ulsan.ac.kr/main/47',
+						      },
+						    },
+						  ],
+						});
+					</script>				    	
+			    </li>
+			    <li>
+			    	<a id="data-copy" class="dropdown-item" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=16269#"><img width="20px" src="./울산대ㅣ2026 정시 입결_files/link-icon.png" alt="공유 아이콘" class="me-2">링크 공유하기</a>
+			    	<input type="hidden" id="data-area" class="data-area" value="https://iphak.ulsan.ac.kr/main/47">
+			    </li>
+	  		</ul>
+        </div>
+    </section>
+</section><div class="content_body" id="contentBody">
+				        <div class="inner">
+			            	<h1 class="sub_tit text-center">전년도입시결과</h1>
+			            	<h2 class="sub_tit_info text-center"></h2>
+				            <section class="content_wrap">
+								<script src="./울산대ㅣ2026 정시 입결_files/board_view.js.다운로드"></script>
+<link rel="stylesheet" href="./울산대ㅣ2026 정시 입결_files/board.css">
+<script>
+	function deleBtn(no){
+		if(confirm("정말로 삭제하시겠습니까?")){
+			$.ajax({
+				url : '/boardDelete.do',
+				method : 'post',
+				data : {
+					stat : no,
+					chkNo : $('#chkNo').val()
+				},
+				success : function(data){
+					location.href='/main/'+47;
+				}
+			});
+		}
+		
+	}
+	
+	$(function(){
+		
+	});	
+</script>
+
+<!--board-view-->
+<section class="board-view">
+    <div class="inner">
+    	<input type="hidden" id="chkNo" value="16269">
+        <div class="operation">
+            <div class="up">
+            	<div class="label"></div>
+                <div class="cont-title">
+                    2026학년도 정시모집 입시 결과 자료</div>
+            </div>
+            <div class="down">
+                <div class="left">
+                    <div class="number">No.16269</div>
+                    <div class="count">조회수 : 683</div>       
+                </div>
+                <div class="right">
+                    <div class="name">작성자 : 관리자</div>
+                    <div class="date">날짜 : 2026-04-06</div>      
+                </div>
+            </div>
+        </div>
+
+        <!-- 글내용 -->
+        <div class="board-cont"><table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 1129px;" class="">
+<tbody>
+<tr style="height: 53px;">
+<td colspan="8" class="xl71" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: white; font-size: 18pt; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; background: rgb(247, 150, 70); white-space: normal; height: 53px; width: 1104px;"><span style="color: white; font-size: 18pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">2026</span><span style="color: white; font-size: 18pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">학년도 입시 결과 통계</span></td>
+</tr>
+<tr style="height: 29px;">
+<td colspan="8" class="xl72" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: windowtext; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: right; vertical-align: middle; white-space: normal; height: 29px; width: 1104px;"><span style="color: windowtext; font-size: 12pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">등록자 기준 작성</span><span style="color: windowtext; font-size: 12pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">, </span><span style="color: windowtext; font-size: 12pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">울산대학교 입학관리팀</span><span style="color: windowtext; font-size: 12pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">: 052-259-2058</span></td>
+</tr>
+<tr style="height: 114px;">
+<td colspan="8" class="xl73" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; text-align: left; vertical-align: middle; height: 114px; width: 1104px;">
+<p style="line-height: 160%;"><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">&nbsp;※   성적산출 방법 안내 ※<br>&nbsp;- 전 모집단위 </span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">: </span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">국어</span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">, </span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">수학</span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">, </span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">영어</span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">, </span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">탐구</span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">(</span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">사회</span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">/</span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">과학</span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">/</span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">직업 중 상위 </span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">1</span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">개</span><span style="color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; font-size: 12pt; font-style: normal; font-weight: 700; text-decoration: none; white-space: normal;">) 4</span><span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-weight: 700;">과목의   등급평균</span><br>
+<span style="color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; font-size: 12pt; font-weight: 700;">&nbsp;- 수능형 성적 산출 방식은 실제 전형 성적 산출 방식과 달리   수험생 편의를 위해 단순 평균 등급으로 산출하여 제공함</span><br>
+<span style="font-family: &#39;DejaVu Sans&#39;, sans-serif; font-weight: 700;">※ 최종후보순위는 등록 여부와 관계 없이 충원을 통해 최종 합격 통보를 받은 마지막 학생의 후보순위&nbsp;</span></p></td>
+</tr>
+<tr style="height: 37px;">
+<td class="xl65" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border: 1px solid black; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 232px;">전형</td>
+<td class="xl65" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: black black black currentcolor; border-image: initial; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 280px;">모집단위</td>
+<td class="xl65" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: black black black currentcolor; border-image: initial; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 110px;">모집인원</td>
+<td class="xl65" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: black black black currentcolor; border-image: initial; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 92px;">지원인원</td>
+<td class="xl65" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: black black black currentcolor; border-image: initial; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 92px;">경쟁률</td>
+<td class="xl65" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: black black black currentcolor; border-image: initial; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 115px;">최종후보순위</td>
+<td class="xl65" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: black black black currentcolor; border-image: initial; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 92px;">평균성적</td>
+<td class="xl66" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-style: normal; text-decoration: none; color: white; font-size: 12pt; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: black black black currentcolor; border-image: initial; background: rgb(247, 150, 70); white-space: normal; height: 37px; width: 92px;"><span style="color: white; font-size: 12pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">70%</span><span style="color: white; font-size: 12pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">컷 성적</span></td>
+</tr>
+<tr style="height: 26px;">
+<td rowspan="14" class="xl74" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px; border-style: none solid solid; border-color: currentcolor black black; border-image: initial; white-space: normal; height: 364px; width: 232px; cursor: col-resize;">수능전형</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">자율전공학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">13</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">65</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">5.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">6</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.03</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.25</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">미래모빌리티공학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">32</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">179</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">5.59</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">17</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.77</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">에너지화학공학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">24</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">141</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">5.88</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">31</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.39</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.75</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">신소재</span><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">·</span><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">반도체융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">17</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">123</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">7.24</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">19</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.79</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">전기전자융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">27</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">118</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.37</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">12</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.60</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.75</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl70" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">ICT</span><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">33</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">168</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">5.09</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">26</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.82</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">바이오메디컬헬스학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">20</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">166</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">8.30</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">22</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.79</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">건축</span><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">·</span><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">도시환경학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">21</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">101</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.81</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">12</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.91</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle; cursor: row-resize;">
+<p><span style="font-size: 10pt;">디자인융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">8</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">48</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">6.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">7</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.22</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">공공인재학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">46</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">215</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.67</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">23</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.04</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">경영경제융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">36</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">171</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.75</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">31</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.87</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">글로벌인문학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">39</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">282</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">7.23</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">39</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.97</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">의예과</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">6</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">26</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.33</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">1</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">1.15</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">1.25</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">간호학과</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">41</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">101</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">2.46</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">7</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">2.72</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">2.75</td>
+</tr>
+<tr style="height: 26px;">
+<td rowspan="5" class="xl74" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px; border-style: none solid solid; border-color: currentcolor black black; border-image: initial; white-space: normal; height: 130px; width: 232px;">
+<p><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">농어촌학생</span></p>
+<p><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;"><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">(</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">정원외</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">)</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">전형</span></span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">미래모빌리티공학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">1</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">6</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">6.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">-</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.75</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.75</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">신소재</span><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">·</span><span style="color: windowtext; font-size: 10pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">반도체융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">3</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">11</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">3.67</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">-</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">공공인재학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">1</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">6</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">6.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">1</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.75</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.75</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">경영경제융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">1</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">7</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">7.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">-</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">글로벌인문학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">1</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">7</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">7.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">1</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.50</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.50</td>
+</tr>
+<tr style="height: 26px;">
+<td rowspan="2" class="xl74" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px; border-style: none solid solid; border-color: currentcolor black black; border-image: initial; white-space: normal; height: 52px; width: 232px;">
+<p><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">기초생활</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">/</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">차상위</span></p>
+<p><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;"><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">(</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">정원외</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;맑은 고딕&#39;, monospace;">)</span><span style="color: windowtext; font-size: 11pt; font-weight: 700; font-style: normal; text-decoration: none; font-family: &#39;DejaVu Sans&#39;, sans-serif;">전형</span></span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">바이오메디컬헬스학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">1</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">11</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">11.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">1</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.00</td>
+</tr>
+<tr style="height: 26px;">
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 280px; vertical-align: middle;">
+<p><span style="font-size: 10pt;">경영경제융합학부</span></p></td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 110px;">1</td>
+<td class="xl67" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">6</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">6.00</td>
+<td style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;DejaVu Sans&#39;, sans-serif; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 115px;">-</td>
+<td class="xl69" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-style: normal; text-decoration: none; color: windowtext; font-weight: 700; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+<td class="xl68" style="padding-top: 1px; padding-right: 1px; padding-left: 1px; font-size: 11pt; font-weight: 400; font-style: normal; text-decoration: none; color: windowtext; font-family: &#39;맑은 고딕&#39;, monospace; text-align: center; vertical-align: middle; border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentcolor black black currentcolor; border-image: initial; white-space: normal; height: 26px; width: 92px;">4.25</td>
+</tr>
+</tbody>
+</table>
+<p><br></p><br><br>
+        </div>
+        <!-- 글내용 -->
+
+        <!--답글-->
+       	<!--답글-->
+
+        <div class="areaLine-light"></div>
+
+        <!-- 첨부파일 -->
+        <div class="add-file">
+        	</div>
+        <!-- 첨부파일 -->
+
+        <div class="areaLine-light mt-4"></div>
+
+        <div class="btn-group">
+            <div class="left">
+            	<a title="이전" href="https://iphak.ulsan.ac.kr/main/47?action=view&amp;no=15916">이전</a>
+                <a title="목록" href="https://iphak.ulsan.ac.kr/main/47">목록</a>
+                <a title="다음">다음</a>
+                </div>
+            </div>
+    </div>
+</section>
+<!--board-view-->
+<!-- Modal -->
+<div class="modal fade pass-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">비밀번호 입력</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<label for="inputPwd" class="blind">비밀번호</label>
+			  <input type="password" id="inputPwd" class="form-control" name="pwd" placeholder="비밀번호를 입력해주세요" aria-label="Recipient&#39;s username" aria-describedby="button-addon2">
+			  <input type="hidden" id="boardSeq">
+			  <input type="hidden" id="prvNumber" value="15916">
+			  <input type="hidden" id="nextNumber" value="">
+			  <input type="hidden" id="chk">
+			  <input type="hidden" id="menuNo" value="47">
+			</div>
+			<div class="modal-footer justify-content-center">
+				<button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">닫기</button>
+				<button type="button" class="btn btn-comp btn-sm" id="button-addon2">입력완료</button>
+			</div>
+		</div>
+	</div>
+</div></section>
+				        </div>
+				    </div>			
+				<script>
+	$(document).ready(function () {
+	    $(".site-map .close-btn").on("click",function(){
+	        $(".site-map").css("display","none");
+	    });
+	    $(".site-map-btn").on("click",function(){        
+	        $(".site-map").css("display","block");
+	    });
+	});
+</script>
+
+<!--푸터-->
+<footer>
+    <div class="inner">
+    	<div class="top">
+    		<ul class="menu">
+	            <li><a href="https://www.ulsan.ac.kr/kor/CMS/PrivaciesMgr/list.do?mCode=MN260" title="개인정보처리방침">개인정보처리방침</a></li>
+	            <li><a href="https://iphak.ulsan.ac.kr/main/28" title="소식지">소식지</a></li>
+	            <li class="site-map-btn"><a href="javascript:" title="사이트맵">사이트맵</a></li>
+	            <li><a href="https://www.ulsan.ac.kr/kor/CMS/Contents/Contents.do?mCode=MN056" title="소식지">찾아오시는길</a></li>
+	            <li><a href="https://www.ulsan.ac.kr/kor/Main.do" title="울산대학교">울산대학교</a></li>
+	        </ul>
+	        <div class="right">
+				<div class="sns-group">
+					<a class="me-1" href="https://www.facebook.com/uouadmission/">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+							<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+						</svg>
+					</a>
+					<a class="" href="https://www.youtube.com/channel/UClb8Gcy7ZwVnuPPQuXqfd6Q">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+							<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path>
+						</svg>
+					</a>
+				</div>
+				<dl class="fnumber-wrap">
+					<dt class="txt1">입학상담안내</dt>
+					<dd>
+						<p class="txt2">052-259-2058~9</p>
+						<p class="txt3">점심시간 : 12:00~13:00</p>
+					</dd>
+				</dl>
+			</div>
+    	</div>
+        
+        <div class="logo">
+            <a href="https://iphak.ulsan.ac.kr/main" title="울산대학교입학처">
+                <img src="./울산대ㅣ2026 정시 입결_files/footer-logo.png" alt="울산대학교입학처로고">
+            </a>
+        </div>
+        <div class="box">
+            <div class="left">
+                <div class="info">
+                    <p class="addr">(44610) 울산광역시 남구 대학로 93 울산대학교 입학관리팀</p>
+                    <p class="tel"><b>TEL</b> 052-259-2058, <b>FAX</b> 052-247-6574</p>
+                </div>
+            </div>
+            <p class="copy">copyright © 2024 univerity of ulsan all right reserved.</p>
+        </div>
+    </div>
+</footer>
+<!--푸터--></div>		
+	
+<div id="extension-mmplj"></div></body></html>

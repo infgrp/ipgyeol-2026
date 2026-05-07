@@ -43,6 +43,11 @@ jobs:
           # 저장소명이 base URL이 됨 (예: /ipgyeol-2026/)
           SITE_BASE: /${{ github.event.repository.name }}/
 
+      - name: 원본 파일을 dist에 복사 (뷰어 서빙용)
+        run: |
+          mkdir -p site/dist/data/raw
+          cp -r data/raw/. site/dist/data/raw/
+
       - name: Pages 아티팩트 업로드
         uses: actions/upload-pages-artifact@v3
         with:

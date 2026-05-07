@@ -1,0 +1,21 @@
+$(function(){
+
+});
+
+//side-menu 사이드 퀵메뉴
+$(window).scroll(function(){
+    //var topValue = 20
+    var topValue = -1000
+    // 현재 스크롤 위치
+    var currentTop = $(window).scrollTop();
+    var bannerTop = currentTop + topValue + "px";
+    /*console.log($(window).scrollTop())*/
+
+    if($(window).scrollTop() > 200 && $(window).scrollTop() < 4800){
+        //이동 애니메이션
+        $(".sidemenu-area").stop().animate({"top" : bannerTop}, 300);
+    }else if($(window).scrollTop() > 4700){ 
+        $(".sidemenu-area").stop();
+        $(".sidemenu-area").css("top" , "3650" + "px");
+    }
+}).scroll();

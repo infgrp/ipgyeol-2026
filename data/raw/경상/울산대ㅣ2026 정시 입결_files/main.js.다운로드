@@ -1,0 +1,389 @@
+
+$(document).ready(function(){
+    //aos 초기화
+    AOS.init();
+
+	$(".main_banner_wrap").slick({
+        dots: false,
+        infinite: true,
+        autoplaySpeed: 4000,
+		speed:600,
+        fade: true,
+        cssEase: 'linear',
+		autoplay:true,
+		arrows: true,
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		appendArrows: $('.main_banner_arr'),
+		zIndex:10,
+		focusOnSelect:true,
+		pauseOnFocus:true
+    }).slick("setPosition");
+
+
+	var $mtsCount = $('.main_banner_wrap .slick-slide:not(.slick-cloned)').length;
+	$('.main_banner_count').html('<span>1</span><em></em><span>  '+ $mtsCount + '</span>');
+	$('.main_banner_wrap').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+		var mtsNum = (currentSlide ? currentSlide : 0) + 1;
+		var mtsTotal = slick.slideCount;
+		$('.main_banner_count').html('<span>'+mtsNum + '</span><em></em><span>' + mtsTotal + '</span>');
+
+	});
+	
+	$('.main_banner_wrap').on('beforeChange', function(event, { slideCount: count }, currentSlide, nextSlide){
+  		let selectors = [nextSlide, nextSlide - count, nextSlide + count].map(n => `[data-slick-index="${n}"]`).join(', ');
+		$('.slick-now').removeClass('slick-now');
+  		$(selectors).addClass('slick-now');
+	});
+	
+	$('[data-slick-index="0"]').addClass('slick-now');
+
+	// 메인배너 재생/일시정지
+    $('.mnBan-play').on('click', function(){
+		if ($(this).hasClass('paused')){
+			$('.main_banner_wrap').slick('slickPlay');
+			$(this).removeClass('paused');
+		} else {
+			$('.main_banner_wrap').slick('slickPause');
+			$(this).addClass('paused');
+		}
+	});
+	
+	
+    //사이드메뉴 열었다 닫기
+    $(".sidemenu-area .left").on("click",function(){
+        $(".sidemenu-area").toggleClass("hide");
+    });
+	$(".sidemenu-area .left").on("focusin", function(){
+		$(".sidemenu-area").removeClass("hide");
+	});
+	$(".sidemenu-area a").last().on("focusout", function(){
+		$(".sidemenu-area").addClass("hide");
+	});
+				
+			
+
+
+	//대학소개
+	$(".intro-area .item").on("click",function(){
+        if($(this).hasClass("open") == false) {
+            $(".intro-area .item").removeClass("open");
+            $(this).addClass("open");
+        }
+    });
+    $(".intro-area .item .close-btn").on("click",function(e){
+        e.stopPropagation()
+        $(".intro-area .item").removeClass("open");
+    });
+
+	//공지사항
+	$('.noti-area .list').slick({
+        infinite:false,
+        slidesToShow: 4,
+		slidesToScroll:1,
+		prevArrow: $('.noti_prev'),
+    	nextArrow: $('.noti_next'),
+		accessibility: true,
+		focusOnSelect: true,
+        responsive:[
+			{
+		     	breakpoint: 1200,
+		      		settings: {
+		        	slidesToShow: 3
+		      	}
+		    },
+			{
+		     	breakpoint: 991,
+		      		settings: {
+		        	slidesToShow: 2
+		      	}
+		    },
+			{
+		     	breakpoint: 575,
+		      		settings: {
+		        	slidesToShow: 1
+		      	}
+		    },
+		    
+		]
+    });
+
+	
+	// 공지사항 분류 BUTTON
+	$(document).on('click', '.divBtn', function(){
+		var bbsArray = new Array();
+		var bbsId = $(this).data('id');
+		
+		$(this).addClass('active');
+		$(this).siblings('li').removeClass('active');
+		
+		var div = $(this).data('no');
+		
+		if(bbsId == 0){
+			bbsArray = [1,23,17];
+		}
+		
+		if(bbsId == 23 || bbsId == 0 || bbsId == 17){
+			div = '';
+		}
+		
+		// 게시물 불러오기
+		$.ajax({
+			url:'/mainBbs.do',
+			method: 'post',
+			data: {
+				bbsId : bbsId,
+				bbsArray : bbsArray,
+				boardDiv : div,
+				num: 10
+			},
+			success: function(data){
+				var items = data.response;
+				var html = "";
+				
+				//초기화
+				$(".noti-area .list").slick('unslick');
+				
+				//owl 옵션 다시 셋팅
+				var updatedOptions = {
+			        infinite:false,
+			        slidesToShow: 4,
+					slidesToScroll:1,
+					prevArrow: $('.noti_prev'),
+			    	nextArrow: $('.noti_next'),
+					accessibility: true,
+					focusOnSelect: true,
+			        responsive:[
+						{
+					     	breakpoint: 1200,
+					      		settings: {
+					        	slidesToShow: 3
+					      	}
+					    },
+						{
+					     	breakpoint: 991,
+					      		settings: {
+					        	slidesToShow: 2
+					      	}
+					    },
+						{
+					     	breakpoint: 575,
+					      		settings: {
+					        	slidesToShow: 1
+					      	}
+					    }
+					    
+					]
+				};						
+				
+				for(var i=0; i<items.length; i++){
+					if(items[i].stat == '1'){
+						var classAdd = "";
+						var boardDivd = items[i].boardDiv;
+						var cdNm = items[i].cdNm;
+						
+						if(items[i].bbsId != 23 && items[i].bbsId != 17){
+							if(boardDivd == '10001'){
+								classAdd = 'noti';
+							}else if(boardDivd == '10002'){
+								classAdd = 'ea_sat';
+							}else if(boardDivd == '10003'){
+								classAdd = 're_sat';
+							}else if(boardDivd == '10004'){
+								classAdd = 'tran';
+							}	
+						}else if(items[i].bbsId == 23){
+							classAdd = 'news';
+							cdNm = '입학소식지';
+						}else if(items[i].bbsId == 17){
+							cdNm = '자료실';							
+						}
+						
+						html += '<a class="item" href="/main/'+items[i].menuId+'?action=view&no='+items[i].boardSeq+'" data-aos="fade-up">'
+							 +		'<span class="top">'
+							 +			'<span class="bat '+classAdd+'">'+cdNm+'</span>'
+							 +			'<span class="tit">'+items[i].title+'</span>'
+							 +		'</span>'
+							 +		'<span class="date">'+items[i].regDe+'</span>'
+							 +	'</a>'
+							
+					}
+				}
+				$('#boardList').html(html);
+				$(".noti-area .list").slick(updatedOptions);
+			}
+		})		
+	});
+	
+	//news
+	$(".news-area .list").slick({
+        infinite:false,
+        slidesToShow:3,
+		slidesToScroll:1, 
+		prevArrow: $('.news_prev'),
+    	nextArrow: $('.news_next'),
+		accessibility: true,
+		focusOnSelect: true,
+        responsive:[
+			{
+				breakpoint: 1024,
+			    settings: {
+			    	slidesToShow: 2
+				}
+			},
+			{
+			  	breakpoint: 767,
+				settings: {
+			      	slidesToShow: 1
+			   	}
+			}
+		]
+	});
+
+	//sns
+	$(".sns-area .list").slick({
+        infinite:true,
+		arrows:false, 
+		accessibility: true,
+		variableWidth: true,
+        autoplay:false,	
+		slidesToShow:4,
+		slidesToScroll:1, 
+		centerMode: true
+	});
+
+
+
+
+
+
+
+
+
+
+});
+
+
+$(function () {
+    const $counters = $(".rollingCount");
+    
+    
+    const exposurePercentage = 100;
+    const duration = 1500; 
+    const addCommas = true;
+    
+    // 숫자를 업데이트하고 애니메이션하는 함수 정의
+    function updateCounter($el, start, end) {
+        let startTime;
+        function animateCounter(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = (timestamp - startTime) / duration;
+            const current = Math.round(start + progress * (end - start));
+            const formattedNumber = addCommas ? current.toLocaleString() : current;
+            $el.text(formattedNumber);
+            
+            if (progress < 1) {
+                requestAnimationFrame(animateCounter);
+            } else {
+                $el.text(addCommas ? end.toLocaleString() : end);
+            }
+        }
+        requestAnimationFrame(animateCounter);
+    }
+
+    $(window).on('scroll', function() {
+        $counters.each(function() {
+            const $el = $(this);
+            if (!$el.data('scrolled')) {
+                const rect = $el[0].getBoundingClientRect();
+                const winHeight = window.innerHeight;
+                const contentHeight = rect.bottom - rect.top;
+                
+                if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >= (contentHeight * exposurePercentage / 100)) {
+                    const start = parseInt($el.data("start"));
+                    const end = parseInt($el.data("end"));
+                    updateCounter($el, start, end);
+                    $el.data('scrolled', true);
+                }
+            }
+        });
+    }).scroll();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+var aosMethod = "0";
+$(function () {
+	$(window).resize(function(){ 
+		aosMethod = "0";
+    	if(window.innerWidth < 1500){
+			$(".sidemenu-area").addClass("hide");
+    	}else{
+      		$(".sidemenu-area").removeClass("hide");
+    	};
+    
+  }).resize();
+  
+	$(window).on('scroll', function() {
+		if(aosMethod == "0"){
+			AOS.refresh();
+				aosMethod = "1";
+		}
+	});
+	
+	function Mobile(){
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	};
+
+	//side-menu 사이드 퀵메뉴
+	$(window).scroll(function(){
+	    //var topValue = 20
+	    var topValue = -800;
+		var moTopVal = -700;
+		
+	    // 현재 스크롤 위치
+	    var currentTop = $(window).scrollTop();
+	    var bannerTop = currentTop + topValue + "px";
+		var moBannerTop = currentTop + moTopVal + "px";
+	    //console.log($(window).scrollTop())
+	
+	    if(currentTop > 100 && currentTop < 4800){ //1800이상 4800이하
+	        //이동 애니메이션
+	        $(".sidemenu-area").stop().animate({"top" : bannerTop}, 300);
+	
+			if (Mobile()){
+				$(".sidemenu-area").stop().animate({"top" : moBannerTop}, 300);
+			}
+	    }else if(currentTop > 4700){  //4700이상
+	        $(".sidemenu-area").stop();
+	        $(".sidemenu-area").css("top" , "3650" + "px");
+	    };
+
+		
+	
+
+	
+	}).scroll();
+});
+
+ 
+
+
+
+
+
+
+
+
+
+
