@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "generated_at": "unix:0",
+  "summary": {
+    "total_documents": 2,
+    "total_rows": 1,
+    "avg_confidence": 0.65,
+    "by_region": { "강원": 1, "경상": 1 },
+    "by_format": { "pdf": 2 }
+  },
+  "documents": [
+    {
+      "id": "susi-2026-aabb1122",
+      "univ": "한림대",
+      "region": "강원",
+      "year": 2026,
+      "track": "susi",
+      "selection_types": ["학생부교과"],
+      "source": {
+        "filename": "한림대ㅣ2026 수시 입결.pdf",
+        "format": "pdf",
+        "url": "data/raw/강원/한림대ㅣ2026%20수시%20입결.pdf",
+        "size_bytes": 612345,
+        "official_url": null,
+        "license_status": "pending",
+        "note": null
+      },
+      "rows": [
+        {
+          "department": "의예과",
+          "selection": "학생부교과 일반전형",
+          "applicants": 234,
+          "competition_rate": 12.34,
+          "grade_50pct": 1.12,
+          "grade_70pct": 1.34,
+          "grade_avg": null,
+          "grade_min": 1.50,
+          "raw_cells": ["의예과 234 12.34 1.12 1.34 1.50"],
+          "extraction_confidence": 0.7
+        }
+      ],
+      "ocr_text": null,
+      "warnings": []
+    },
+    {
+      "id": "susi-2026-ccdd3344",
+      "univ": "동의대",
+      "region": "경상",
+      "year": 2026,
+      "track": "susi",
+      "selection_types": ["학생부교과", "실기/예체능"],
+      "source": {
+        "filename": "동의대ㅣ2026학년도 수시모집 학생부교과, 실기실적 전형결과(최종).pdf",
+        "format": "pdf",
+        "url": "data/raw/경상/동의대ㅣ2026학년도 수시모집 학생부교과, 실기실적 전형결과(최종).pdf",
+        "size_bytes": 1234567,
+        "official_url": null,
+        "license_status": "pending",
+        "note": null
+      },
+      "rows": [],
+      "ocr_text": null,
+      "warnings": ["표 추출 실패: 모집단위 행을 인식하지 못했습니다."]
+    }
+  ]
+}

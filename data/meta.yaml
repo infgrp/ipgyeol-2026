@@ -1,0 +1,21 @@
+# 자료별 메타 오버라이드.
+# 키는 data/raw 기준 상대 경로. 값은 다음 필드를 가질 수 있다.
+#   univ            : 자동 추정된 대학명을 강제 교체
+#   official_url    : 각 대학 입학처의 해당 자료 공식 링크
+#   license_status  : confirmed | pending | link_only | denied
+#   note            : 자유 메모 (예: 회신일자, 담당자 등)
+#
+# 예시:
+#
+# files:
+#   "강원/한림대ㅣ2026 수시 입결.pdf":
+#     univ: 한림대
+#     official_url: https://admission.hallym.ac.kr/...
+#     license_status: pending
+#     note: "2026-04-25 회신 대기 (담당: 입학처)"
+#
+#   "경상/울산대ㅣ2026 정시 입결.html":
+#     license_status: link_only
+#     note: "원본 웹페이지 캡처본 — 공식 페이지 링크만 노출"
+
+files: {}

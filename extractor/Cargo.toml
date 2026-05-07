@@ -1,0 +1,35 @@
+[package]
+name = "extractor"
+version = "0.1.0"
+edition = "2021"
+description = "PDF/XLSX 입시결과 자료에서 메타·표를 추출하여 site/public/data.json을 생성"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+walkdir = "2.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+anyhow = "1.0"
+thiserror = "1.0"
+regex = "1.10"
+once_cell = "1.19"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# PDF: 본 추출기는 PDF 자체를 파싱하지 않는다. 표 행 추출은
+#       `scripts/preprocess_pdf.py`(PyMuPDF)가 담당하고, 본 추출기는
+#       그 결과 JSON을 머지·정합 검증한다. (한국어 PDF 형식 편차로 인한
+#       Rust 단독 추출의 신뢰성 한계를 회피하기 위함.)
+
+# XLSX
+calamine = "0.24"
+
+# Hashing for stable IDs
+sha2 = "0.10"
+hex = "0.4"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

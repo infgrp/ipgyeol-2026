@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>2026 대학 입시결과 인덱스 (전국)</title>
+    <meta name="description" content="전국 대학 2026학년도 수시·정시 입시결과를 지역별로 검색·열람합니다." />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="brand">2026 입시결과 인덱스</h1>
+      <nav class="modes">
+        <a href="#/" data-mode="student" class="mode-link">학생·학부모</a>
+        <a href="#/pro" data-mode="pro" class="mode-link">교사 모드</a>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section class="searchbar">
+        <input
+          id="q"
+          type="search"
+          placeholder="대학·학과 검색 (예: 한림대 의예과)"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div id="filters" class="filters"></div>
+      </section>
+
+      <section id="summary" class="summary"></section>
+      <section id="results" class="results"></section>
+    </main>
+
+    <aside id="viewer" class="viewer hidden" aria-hidden="true">
+      <div class="viewer-header">
+        <strong id="viewer-title">원본 보기</strong>
+        <button id="viewer-close" aria-label="닫기">×</button>
+      </div>
+      <div id="viewer-body" class="viewer-body"></div>
+    </aside>
+
+    <footer class="bottom">
+      <small>
+        본 사이트는 진학지도용 인덱스이며, 모든 자료의 권위 있는 출처는 각 대학 입학처입니다.
+        자동 추출 수치에는 오차가 있을 수 있으며 항상 원본 자료를 함께 확인하십시오.
+      </small>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

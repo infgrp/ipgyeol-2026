@@ -1,0 +1,37 @@
+# Rust
+extractor/target/
+**/*.rs.bk
+Cargo.lock
+
+# Node
+site/node_modules/
+site/dist/
+site/.vite/
+
+# Build output
+docs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# 원본 자료 — 저작권은 각 대학에 있으므로 git에 포함하지 않음.
+# 로컬에서 extractor를 실행한 뒤 site/public/data.json만 커밋한다.
+data/raw/
+data/converted/
+data/preprocessed/
+data/ocr/
+
+# data.json은 커밋 대상 (extractor로 로컬 생성 후 push)
+# site/public/data.json  ← 주석 처리: 커밋 허용

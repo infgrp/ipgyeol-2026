@@ -1,0 +1,19 @@
+{
+  "name": "ipgyeol-2026-site",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "2026 입시결과 인덱스 정적 사이트",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "minisearch": "^6.3.0",
+    "pdfjs-dist": "^4.5.136"
+  }
+}

@@ -1,0 +1,89 @@
+name: build-and-deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1) PDF 사전 처리 (Python + PyMuPDF)
+      #    Rust 추출기는 PDF 표를 직접 파싱하지 않고 이 결과(data/preprocessed)를 머지한다.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install Python deps
+        run: pip install --upgrade pip && pip install pymupdf
+      - name: Preprocess PDFs
+        run: python3 scripts/preprocess_pdf.py data --force
+
+      # 2) Rust 추출기 빌드 + 데이터 추출 (XLSX 파싱 + preprocess JSON 머지)
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: extractor
+      - name: Build extractor
+        working-directory: extractor
+        run: cargo build --release
+      - name: Run extractor
+        run: |
+          ./extractor/target/release/extractor scan ./data \
+            --out ./site/public/data.json
+
+      # 3) 사이트 빌드
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+      - name: Install site deps
+        working-directory: site
+        run: npm ci || npm install
+      - name: Build site
+        working-directory: site
+        env:
+          # GitHub Pages 프로젝트 사이트(https://<user>.github.io/<repo>/)에 배포할 경우
+          # 저장소명을 base로 지정한다. 사용자 사이트라면 '/'로 두면 된다.
+          SITE_BASE: ${{ vars.SITE_BASE || '/ipgyeol-2026/' }}
+        run: npm run build
+
+      # 4) data/raw 일부도 함께 정적 산출물에 포함 (license_status != denied만)
+      - name: Stage raw data into dist (필터 적용)
+        run: |
+          mkdir -p site/dist/data/raw
+          # 단순 복사: license_status 필터링은 추출기 단에서 url을 비우는 방향으로
+          # 발전시키는 것이 정석이나, 1차에서는 통째 복사하고 NOTICE.md 안내로 운영.
+          cp -R data/raw/. site/dist/data/raw/
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
