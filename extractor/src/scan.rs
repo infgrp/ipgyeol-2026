@@ -119,7 +119,8 @@ pub fn run(data_dir: &Path, extract_body: bool) -> Result<Report> {
         rows = normalize::polish(rows);
 
         let mut doc = Document {
-            id: normalize::slug(&univ, parsed.year, &parsed.track),
+            id: normalize::slug(&univ, parsed.year, &parsed.track,
+                path.file_name().and_then(|s| s.to_str()).unwrap_or("")),
             univ,
             region,
             year: parsed.year,
@@ -178,7 +179,8 @@ pub fn inspect_one(path: &Path) -> Result<Document> {
     rows = normalize::polish(rows);
 
     let mut doc = Document {
-        id: normalize::slug(parsed.univ.as_deref().unwrap_or("?"), parsed.year, &parsed.track),
+        id: normalize::slug(parsed.univ.as_deref().unwrap_or("?"), parsed.year, &parsed.track,
+            path.file_name().and_then(|s| s.to_str()).unwrap_or("")),
         univ: parsed.univ.unwrap_or_default(),
         region: "(inspect)".into(),
         year: parsed.year,

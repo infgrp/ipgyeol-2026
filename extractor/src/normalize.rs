@@ -19,14 +19,16 @@ pub fn polish(rows: Vec<Row>) -> Vec<Row> {
 
 fn is_grade(g: f32) -> bool { (1.0..=9.5).contains(&g) }
 
-pub fn slug(univ: &str, year: Option<u32>, track: &crate::model::Track) -> String {
+/// filename을 포함해 항상 고유한 id를 생성한다.
+/// 이전 버전은 univ+year+track만 해시해서 동일 대학의 복수 파일이 충돌했음.
+pub fn slug(univ: &str, year: Option<u32>, track: &crate::model::Track, filename: &str) -> String {
     use sha2::{Digest, Sha256};
     let track_str = match track {
         crate::model::Track::Susi => "susi",
         crate::model::Track::Jeongsi => "jeongsi",
         crate::model::Track::Unknown => "etc",
     };
-    let basis = format!("{}|{}|{}", univ, year.unwrap_or(0), track_str);
+    let basis = format!("{}|{}|{}|{}", univ, year.unwrap_or(0), track_str, filename);
     let mut h = Sha256::new();
     h.update(basis.as_bytes());
     let digest = h.finalize();

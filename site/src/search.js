@@ -16,13 +16,24 @@ export function buildIndex(docs) {
     searchOptions: { boost: { univ: 3, selection_types_joined: 2 } },
   });
 
-  const items = docs.map(d => ({
-    id: d.id,
-    univ: d.univ,
-    region: d.region,
-    selection_types_joined: (d.selection_types || []).join(' '),
-    rows_text: (d.rows || []).map(r => r.department).join(' '),
-  }));
-  index.addAll(items);
+  const seen = new Set();
+  const items = docs
+    .filter(d => {
+      if (seen.has(d.id)) return false;
+      seen.add(d.id);
+      return true;
+    })
+    .map(d => ({
+      id: d.id,
+      univ: d.univ,
+      region: d.region,
+      selection_types_joined: (d.selection_types || []).join(' '),
+      rows_text: (d.rows || []).map(r => r.department).join(' '),
+    }));
+  try {
+    index.addAll(items);
+  } catch (e) {
+    console.warn('MiniSearch index build error:', e);
+  }
   return index;
 }

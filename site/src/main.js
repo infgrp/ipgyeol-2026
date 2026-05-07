@@ -74,10 +74,15 @@ function updateMode() {
 }
 
 async function main() {
-  const data = await loadData();
-  state.docs = data.documents ?? [];
-  state.index = buildIndex(state.docs);
-  mountFilters(state, document.getElementById('filters'), applyFilters);
+  try {
+    const data = await loadData();
+    state.docs = data.documents ?? [];
+    state.index = buildIndex(state.docs);
+    mountFilters(state, document.getElementById('filters'), applyFilters);
+  } catch (e) {
+    console.error('초기화 오류:', e);
+  }
+  // bindUI·applyFilters는 데이터 로드 실패 시에도 반드시 실행
   bindUI();
   applyFilters();
 }
