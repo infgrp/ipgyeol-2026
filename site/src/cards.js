@@ -1,4 +1,5 @@
 // 결과 카드 렌더링. 학생 모드/교사 모드에서 표시 깊이가 다르다.
+const IS_DEV = import.meta.env.DEV;
 
 export function renderCards(state, root, { onOpen }) {
   root.innerHTML = '';
@@ -64,15 +65,28 @@ function card(doc, mode, onOpen) {
   const actions = document.createElement('div');
   actions.className = 'actions';
 
-  const openBtn = document.createElement('button');
-  openBtn.textContent = '원본 열기';
-  openBtn.disabled = doc.source.license_status === 'denied';
-  openBtn.addEventListener('click', () => onOpen(doc));
-  actions.appendChild(openBtn);
+  if (doc.source.license_status !== 'denied') {
+    if (!IS_DEV && doc.source.official_url) {
+      // 프로덕션 + 공식 URL 있음: 바로 공식 페이지로
+      const a = document.createElement('a');
+      a.href = doc.source.official_url;
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.textContent = '공식 페이지 열기 →';
+      actions.appendChild(a);
+    } else {
+      // 로컬 개발 또는 공식 URL 없음: 뷰어 열기
+      const openBtn = document.createElement('button');
+      openBtn.textContent = IS_DEV ? '원본 열기' : '원본 열기 (로컬 전용)';
+      openBtn.title = IS_DEV ? '' : '로컬 개발 서버에서만 PDF를 직접 열 수 있습니다.';
+      openBtn.addEventListener('click', () => onOpen(doc));
+      actions.appendChild(openBtn);
+    }
+  }
 
-  if (doc.source.official_url) {
+  // 공식 페이지 링크 — 뷰어 버튼과 별도로 항상 표시
+  if (doc.source.official_url && (IS_DEV || doc.source.license_status === 'denied')) {
     const a = document.createElement('a');
-    a.href = doc.source.official_url; a.target = '_blank'; a.rel = 'noopener';
+    a.href = doc.source.official_url; a.target = '_blank'; a.rel = 'noopener noreferrer';
     a.textContent = '공식 페이지';
     actions.appendChild(a);
   }
