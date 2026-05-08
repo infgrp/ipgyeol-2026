@@ -39,11 +39,7 @@ function card(doc, mode, onOpen) {
   for (const t of doc.selection_types || []) {
     const b = document.createElement('span'); b.className = 'badge'; b.textContent = t; badges.appendChild(b);
   }
-  if (doc.source.license_status === 'pending') {
-    const b = document.createElement('span'); b.className = 'badge warn'; b.textContent = '허가 대기'; badges.appendChild(b);
-  } else if (doc.source.license_status === 'link_only') {
-    const b = document.createElement('span'); b.className = 'badge warn'; b.textContent = '링크만'; badges.appendChild(b);
-  } else if (doc.source.license_status === 'denied') {
+  if (doc.source.license_status === 'denied') {
     const b = document.createElement('span'); b.className = 'badge bad'; b.textContent = '비공개'; badges.appendChild(b);
   }
   el.appendChild(badges);

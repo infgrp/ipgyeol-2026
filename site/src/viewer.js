@@ -9,7 +9,9 @@ export function openViewer(doc) {
   t.textContent = `${doc.univ} · ${doc.source.filename}`;
   b.innerHTML = '';
 
-  const url = `${import.meta.env.BASE_URL}${doc.source.url}`;
+  // 한국어·공백이 포함된 경로를 각 세그먼트별로 인코딩
+  const encodedPath = doc.source.url.split('/').map(encodeURIComponent).join('/');
+  const url = `${import.meta.env.BASE_URL}${encodedPath}`;
   const fmt = doc.source.format;
 
   if (fmt === 'pdf') {
